@@ -59,7 +59,7 @@ export function About() {
     },
   }
 
-  const highlights = ["Full-Stack Development", "UI/UX Design", "3D Graphics", "Creative Technology"]
+  const highlights = ["Frontend Development", "Backend Architecture", "DevOps & Cloud", "System Design"]
 
   return (
     <section id="about" className="py-20 md:py-32 relative">
@@ -78,22 +78,22 @@ export function About() {
 
             <motion.div variants={itemVariants} className="space-y-4 text-muted-foreground text-lg">
               <p>
-                I'm a passionate creative developer and the founder of{" "}
-                <span className="text-primary font-semibold">Vertex Studio Canada</span>, where I combine technical
-                expertise with creative vision to build exceptional digital experiences.
+                I'm a passionate full-stack developer and the founder of{" "}
+                <span className="text-primary font-semibold">Vertex Studio Canada</span>, where I build scalable web
+                applications and deliver comprehensive technical solutions.
               </p>
               <p>
-                My journey spans full-stack development, 3D graphics, UI/UX design, and emerging technologies. I believe
-                in pushing the boundaries of what's possible in digital media and interactive experiences.
+                My expertise spans the entire development stack - from crafting intuitive user interfaces to designing
+                robust backend architectures and implementing efficient DevOps workflows.
               </p>
               <p>
-                When I'm not coding or designing, you'll find me exploring new technologies, contributing to open source
-                projects, and sharing knowledge with the developer community.
+                I specialize in modern web technologies, cloud infrastructure, and creating seamless user experiences
+                that drive business growth and user engagement.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-3">
-              <h3 className="text-lg font-semibold">What I Do</h3>
+              <h3 className="text-lg font-semibold">Core Expertise</h3>
               <motion.div className="flex flex-wrap gap-2" variants={containerVariants}>
                 {highlights.map((highlight, index) => (
                   <motion.div
@@ -104,6 +104,7 @@ export function About() {
                       scale: 1.05,
                       transition: { type: "spring", stiffness: 400, damping: 10 },
                     }}
+                    className="interactive"
                   >
                     <Badge variant="secondary" className="text-sm py-1 px-3">
                       {highlight}
@@ -163,7 +164,7 @@ export function About() {
               />
 
               <div className="text-6xl font-bold text-primary/30 text-center">
-                <div>Creative</div>
+                <div>Full Stack</div>
                 <div>Developer</div>
               </div>
             </motion.div>

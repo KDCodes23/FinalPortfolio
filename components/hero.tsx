@@ -66,7 +66,7 @@ export function Hero() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="block"
             >
-              Creative Developer
+              Full Stack Developer
             </motion.span>
             <motion.span
               initial={{ opacity: 0, x: 20 }}
@@ -74,7 +74,7 @@ export function Hero() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="text-primary block"
             >
-              & Digital Innovator
+              & Tech Entrepreneur
             </motion.span>
           </h1>
         </motion.div>
@@ -85,8 +85,8 @@ export function Hero() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-xl md:text-2xl text-muted-foreground max-w-[700px] mx-auto"
         >
-          Building the future with <span className="text-primary font-semibold">Vertex Studio Canada</span> and crafting
-          exceptional digital experiences
+          Building scalable applications with <span className="text-primary font-semibold">Vertex Studio Canada</span>{" "}
+          and delivering end-to-end solutions
         </motion.p>
 
         <motion.div

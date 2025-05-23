@@ -2,13 +2,11 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { useTheme } from "next-themes"
 
 export function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isPointer, setIsPointer] = useState(false)
   const [isClicking, setIsClicking] = useState(false)
-  const { theme } = useTheme()
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -70,16 +68,19 @@ export function CustomCursor() {
 
   return (
     <>
-      {/* Main cursor */}
+      {/* Main cursor - larger when hovering, with mix-blend-mode for text inversion */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 rounded-full pointer-events-none z-50 border-2 border-primary"
         style={{
-          backgroundColor: theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+          mixBlendMode: isPointer ? "difference" : "normal",
+          backgroundColor: isPointer ? "hsl(var(--primary))" : "transparent",
         }}
         animate={{
-          x: mousePosition.x - 16,
-          y: mousePosition.y - 16,
-          scale: isClicking ? 0.8 : isPointer ? 1.2 : 1,
+          x: mousePosition.x - (isPointer ? 20 : 16),
+          y: mousePosition.y - (isPointer ? 20 : 16),
+          width: isPointer ? 40 : 32,
+          height: isPointer ? 40 : 32,
+          scale: isClicking ? 0.8 : 1,
         }}
         transition={{
           type: "spring",
@@ -89,7 +90,7 @@ export function CustomCursor() {
         }}
       />
 
-      {/* Cursor dot */}
+      {/* Cursor dot - hidden when hovering over interactive elements */}
       <motion.div
         className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-50"
         animate={{
