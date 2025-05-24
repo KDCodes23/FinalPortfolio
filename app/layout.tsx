@@ -11,8 +11,8 @@ const playfair = Playfair_Display({
 })
 
 export const metadata = {
-  title: "Your Portfolio",
-  description: "Full-stack developer portfolio showcasing projects and skills",
+  title: "Kanishka Dutta",
+  description: "Personal Resume Portfolio",
     generator: 'v0.dev'
 }
 

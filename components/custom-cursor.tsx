@@ -90,7 +90,7 @@ export function CustomCursor() {
         }}
       />
 
-      {/* Cursor dot - hidden when hovering over interactive elements */}
+
       <motion.div
         className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-50"
         animate={{

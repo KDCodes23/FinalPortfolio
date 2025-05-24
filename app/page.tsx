@@ -58,11 +58,11 @@ export default function Home() {
         <footer className="border-t py-6 md:py-0">
           <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
             <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} Kanishka Dutta. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/KDCodes23"
                 target="_blank"
                 rel="noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors interactive"
@@ -71,7 +71,7 @@ export default function Home() {
                 <span className="sr-only">GitHub</span>
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="Kdutta2017@outlook.com"
                 className="text-muted-foreground hover:text-foreground transition-colors interactive"
               >
                 <Mail className="h-5 w-5" />
